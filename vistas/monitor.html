@@ -1,0 +1,37 @@
+<%
+	stat = {"registro":"","aceptado":"blue","rechazado":"red","atendido":"green"};
+
+%>
+
+<tr class="shake id_<%= emergencia %> <%= stat[estatus.trim()] %> lighten-4">
+	<th style=";text-align:center"><%= emergencia %></th>
+	<th style=";text-align:center"><img style="width:50px" src="images/<%= tipo %>.png" alt="" class="circle"></th>
+	<th style="padding:5px;text-align:center">
+		<b>Nombre:</b> <%= nombre %><br>
+		<b>Dirección:</b> <%= direccion %><br>
+		<b>Teléfono:</b> <%= telefono %><br>
+		<b>Correo:</b> <%= correo %><br></th>  
+	<th style="width: 85px;text-align:center"><%= fecha["date"] %></th>  
+                                   
+	<th style="width: 85px;text-align:center">
+	
+<div class="fixed-action-btn horizontal click-to-toggle" style="position: relative;top:-15px;">
+	<a class="btn-floating  blue-grey darken-1" style="left:45px;top:15px">
+	  <i class="material-icons">settings</i>
+	</a>
+	<ul>
+	<li><a class="waves-effect waves-light modal-trigger btn-floating waves-effect waves-light btn tooltipped btn" data-position="top" data-delay="50" data-tooltip="Enviar Notificación" onclick="atender(<%= persona %>,'<%= tipo %>','<%= emergencia %>')"> <i class="material-icons right">add_alert</i></a>	
+	
+		<li><a class="btn-floating red btn tooltipped btn" data-position="top" data-delay="50" data-tooltip="Ver Ubicación" href="#modal_mapa" onclick="ubicacion('<%= coordenadas %>')"><i class="material-icons">location_on</i></a></li>
+		<li><a href="mailto:<%= correo %>" class="btn-floating yellow darken-1 btn tooltipped btn" data-position="top" data-delay="50" data-tooltip="Enviar Correo"><i class="material-icons">email</i></a></li>
+		<li><a href="tel:<%= telefono %>" class="btn-floating green btn tooltipped btn" data-position="top" data-delay="50" data-tooltip="Llamar"><i class="material-icons">phone</i></a></li>
+	</ul>
+  </div>
+	
+<script>
+		$(".tooltipped").tooltip({delay: 50});
+</script>
+	
+	</th>
+</tr>
+

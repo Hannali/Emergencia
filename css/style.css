@@ -1,0 +1,81 @@
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+
+nav ul a,
+nav .brand-logo { color: #fff; }
+
+#contenido{ padding-top: 10px; }
+
+p {
+   line-height: 2rem;
+}
+
+.button-collapse {
+   color: #ffffff;
+}
+
+.parallax-container {
+   min-height: 592px;
+   line-height: 0;
+   height: auto;
+   color: rgba(255,255,255,.9);
+}
+.parallax-container .section {
+   width: 100%;
+}
+
+@media only screen and (max-width : 992px) {
+   .parallax-container .section {
+      position: absolute;
+      top: 40%;
+   }
+   #index-banner .section {
+      top: 10%;
+   }
+}
+
+@media only screen and (max-width : 700px) {
+   #index-banner .section {
+      top: 0;
+   }
+}
+
+.icon-block {
+   padding: 0 10px;
+}
+.icon-block .material-icons {
+   font-size: inherit;
+}
+
+/*footer.page-footer {
+  body {
+     display: flex;
+     min-height: 100vh;
+     flex-direction: column;
+   }
+
+   main {
+     flex: 1 0 auto;
+   }
+}*/
+
+header, main, footer { padding-left: 240px; }
+
+@media only screen and (max-width : 992px) {
+   header, main, footer { padding-left: 0; }
+}
+
+.collection .collection-item.compact-tool {
+   min-height: 45px;
+}
+
+.collection .collection-item.compact-tool .secondary-content {
+   top: 3px;
+   right: 16px;
+}
+
